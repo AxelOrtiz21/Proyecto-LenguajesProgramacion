@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>AROF | Tarea 14</title>
+	 <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+</head>
+<body>
+
+    <header id="Seccion1" class="header4">
+    	<div class="header_menu">
+    		<div class="logo"> 
+    			<a href="index.html">
+    			<img src="imagenes/corona.png" alt="Corona"> </a>
+    		</div>
+    		<div class="menu_list">
+    			<ul>
+    				<li><a href="index.html" ><b>Inicio</b></a></li>
+    				<li><a href="Menu-Personal.html"><b>Personal</b></a></li>
+    				<li><a href="Menu-Tareas.html"><b>Tareas</b></a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class="textos">
+            <h1 class="titulo">TAREA 14</h1>
+            <h3 class="subtitulo">Búsqueda en Matriz</h3>
+        </div>
+        <div class="sesgoabajo"></div>	
+    </header>
+    <main>
+    	<div class="acerca-de" id="seccion1">
+        <div class="Cont-tareas">
+            <h2 style="font-family: Lucida Console">Descripción</h2>
+            <ul class="programas">
+                <li>Construya un programa en JAVA y RUBY que, al recibir
+                    como datos un arreglo bidimensional de NxM
+                    elementos de tipo entero y un número entero,
+                    determine cuántas veces se encuentra este número
+                    dentro del arreglo. Además, que imprima la matriz al
+                    final 
+                </li><br>
+                <li>Ejemplo: <br>
+                    Valor a buscar: 8 <br>
+                    “El número 8 aparece 3 veces en la Matriz: ” <br>
+                       [+1   21   89   -2] <br>
+                       [+8   +7   34   +5] <br>
+                       [+6   -5   +0   +2] <br>
+                       [21   11   +8   +8] <br>
+                </li>
+            </ul><br><br>
+
+        </div>
+        </div>
+        <div class="code">
+            <h3>Java</h3><br><br>
+            <pre>
+                /*  
+                Nombre: Axel Ramon Ortiz Flores Matricula: 1819000 Hora: V6
+                Tarea 14: Busqueda en Matriz
+                */
+                import javax.swing.JOptionPane;
+                
+                public class Tarea14{
+                
+                    public static void main(String[] args) {
+                        int i, n, b, c=0, m, j;
+                        int[][] A;
+                        String letrero="";
+                        String entrada;
+                
+                        entrada= JOptionPane.showInputDialog("Ingrese el numero de filas: ");
+                        n= Integer.parseInt(entrada);
+                
+                        entrada= JOptionPane.showInputDialog("Ingrese el numero de columnas");
+                        m= Integer.parseInt(entrada);
+                
+                        A = new int[n][m];
+                
+                        for(i=0; i<=n-1; i++){
+                            for(j=0; j<=m-1; j++){
+                                entrada= JOptionPane.showInputDialog("Ingrese A["+(i+1)+"]["+(j+1)+"]: ");
+                                A[i][j]= Integer.parseInt(entrada);
+                            }
+                        }
+                
+                        entrada= JOptionPane.showInputDialog("Ingrese el numero a buscar: ");
+                        b= Integer.parseInt(entrada);
+                
+                        for (i=0; i<=n-1; i++){
+                            for (j=0; j<=m-1; j++) {
+                                if(A[i][j]==b){
+                                    c=c+1;
+                                }
+                            }
+                        }
+                
+                        for(i=0; i<=n-1; i++){
+                            for (j=0; j<=m-1; j++) {
+                                letrero= letrero+A[i][j]+" ";
+                            }
+                            letrero = letrero + "\n     ";
+                         }
+                
+                        letrero="El valor "+b+" aparece "+c+" veces en la Matriz: \nA=" + letrero;
+                
+                        JOptionPane.showMessageDialog(null, letrero);
+                    }
+                }
+            </pre>
+            </div><br>
+                    <div class="code">
+            <h3>Ruby</h3><br><br>
+            <pre>
+			=begin 
+			Nombre: Axel Ramon Ortiz Flores  Matr.1819000  Hora:V6
+			Tarea 14:Busqueda en Matriz
+			=end
+			
+			print("# De filas: ")
+			n=gets().to_i
+			print("# De columnas: ")
+			m=gets().to_i
+			a = Array.new(n){Array.new(m)}
+			c=0
+			
+			    for i in (0...n)
+			        for j in (0...m)
+			            print("A[#{i+1}][#{j+1}]: ")
+			            a[i][j]= gets().to_i
+			        end
+			    end
+			
+			    print("\nIngrese el numero a buscar: ")
+			    x=gets().to_i
+			
+			    for i in (0...n)
+			        for j in (0...m)
+			            if (a[i][j]==x)then
+			            c=c+1  
+			        end
+			        end
+			    end
+			
+			    print("\nEl numero #{x} aparece #{c} veces en la matriz:\n")
+			    print("A= ")
+			    for i in (0...n)
+			        for j in (0...m)
+			            print(a[i][j].to_s+ " ")
+			        end
+			        print("\n   ")
+			    end
+            </pre>
+            </div>
+        </div> 
+    </main>
+
+    <div class="botones">
+            <ul >
+                <li class="atras"><a href="Tarea 13.html"><img src="imagenes/atras.png" alt=""></a></li>
+                <li class="adelante"><a href="Tarea 15.html"><img src="imagenes/adelante.png" alt=""></a></li>
+            </ul>
+        </div>
+
+        <div class="to-top"><a href="#Seccion1"><img src="imagenes/arriba.png" alt=""></a></div>
+
+    <footer>
+        <div class="container-footer-all">
+        <div class="container-body">
+            <div class="colum2">
+                <img src="imagenes/fabajo.png" alt="terry">
+            </div>
+        </div>
+        </div>
+        <div class="container-footer">
+            <div class="copyrght">
+                © 2020 Todos los Derechos Reservados | Axel Ortiz
+            </div>
+
+            <div class="informacion">1819000 | Lenguajes de Programacion | L-M-V: V6</div>
+        </div>
+    </footer>
+</body>
+</html>

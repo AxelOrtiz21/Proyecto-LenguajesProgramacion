@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>AROF | Tarea 15</title>
+	 <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+</head>
+<body>
+
+    <header id="Seccion1" class="header4">
+    	<div class="header_menu">
+    		<div class="logo"> 
+    			<a href="index.html">
+    			<img src="imagenes/corona.png" alt="Corona"> </a>
+    		</div>
+    		<div class="menu_list">
+    			<ul>
+    				<li><a href="index.html" ><b>Inicio</b></a></li>
+    				<li><a href="Menu-Personal.html"><b>Personal</b></a></li>
+    				<li><a href="Menu-Tareas.html"><b>Tareas</b></a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class="textos">
+            <h1 class="titulo">TAREA 15</h1>
+            <h3 class="subtitulo"> Suma de matrices</h3>
+        </div>
+        <div class="sesgoabajo"></div>	
+    </header>
+    <main>
+    	<div class="acerca-de" id="seccion1">
+        <div class="Cont-tareas">
+            <h2 style="font-family: Lucida Console">Descripción</h2>
+            <ul class="programas">
+                <li>Elaborar un programa en JAVA y RUBY que calcule la
+                    suma de dos matrices que ingrese el usuario. (nota:
+                    Validar lo que sea necesario para poder realizar la
+                    suma de matrices)
+                </li><br>
+            </ul><br><br>
+
+        </div>
+        </div>
+        <div class="code">
+            <h3>Java</h3><br><br>
+            <pre>
+                    /*  
+                    Nombre: Axel Ramon Ortiz Flores Matricula: 1819000 Hora: V6
+                    Tarea 15: Suma de Matrices
+                    */
+                    import javax.swing.JOptionPane;
+                    
+                    public class Tarea15{
+                    
+                        public static void main(String[] args) {
+                            int i, b, j;
+                            int n, m;
+                            int f, c;
+                            int[][] A;
+                            int[][] B;
+                            int[][] C;
+                            String letrero="";
+                            String entrada;
+                    
+                            entrada= JOptionPane.showInputDialog("#Filas del Arreglo A: ");
+                            n= Integer.parseInt(entrada);
+                    
+                            entrada= JOptionPane.showInputDialog("#Columna del Arreglo A");
+                            m= Integer.parseInt(entrada);
+                    
+                            entrada= JOptionPane.showInputDialog("#Filas del Arreglo B: ");
+                            f= Integer.parseInt(entrada);
+                    
+                            entrada= JOptionPane.showInputDialog("#Columnas del Arreglo B");
+                            c= Integer.parseInt(entrada);
+                    
+                    
+                            if(n==f){
+                                if (m==c) {
+                                    A = new int[n][m];
+                                    B = new int[f][c];
+                                    C = new int[n][m];
+                    
+                                    /*Pedimos los datos del arreglo A*/
+                                    for(i=0; i<=n-1; i++){
+                                        for(j=0; j<=m-1; j++){
+                                            entrada= JOptionPane.showInputDialog("Ingrese A["+(i+1)+"]["+(j+1)+"]: ");
+                                            A[i][j]= Integer.parseInt(entrada);
+                                        }
+                                    }
+                                    /*Pedimos los datos del arreglo B*/
+                                    for(i=0; i<=f-1; i++){
+                                        for(j=0; j<=c-1; j++){
+                                            entrada= JOptionPane.showInputDialog("Ingrese B["+(i+1)+"]["+(j+1)+"]: ");
+                                            B[i][j]= Integer.parseInt(entrada);
+                                        }
+                                    }
+                    
+                                    /*Sumamos el arreglo A +  arreglo B = arreglo C*/
+                                    for (i=0; i<=n-1; i++){
+                                        for (j=0; j<=m-1; j++) {
+                                            C[i][j] = A[i][j] + B[i][j];
+                                        }
+                                    }
+                    
+                                    /*Imprimimos Arreglo C= resultante*/
+                                    for(i=0; i<=n-1; i++){
+                                        for (j=0; j<=m-1; j++) {
+                                            letrero= letrero+C[i][j]+" ";
+                                        }
+                                        letrero = letrero + "\n     ";
+                                     }
+                    
+                                    letrero="C=" + letrero;
+                    
+                                    JOptionPane.showMessageDialog(null, letrero);
+                                }else{
+                                    JOptionPane.showMessageDialog(null, "Los Arreglos deben tener las mismas longitudes!!");
+                                }
+                            }else{
+                                JOptionPane.showMessageDialog(null, "Los Arreglos deben tener las mismas longitudes!!");
+                            }
+                            
+                        }
+                    }
+            </pre>
+            </div><br>
+            <div class="code">
+            <h3>Ruby</h3><br><br>
+            <pre>
+                =begin 
+                Nombre: Axel Ramon Ortiz Flores  Matr.1819000  Hora:V6
+                Tarea 14:Busqueda en Matriz
+                =end
+                puts("\nTomando en cuenta que para sumar matrices las longitudes deben ser las mismas, ingrese: ")
+                print("# De filas: ")
+                n=gets().to_i
+                print("# De columnas: ")
+                m=gets().to_i
+                a = Array.new(n){Array.new(m)}
+                
+                b = Array.new(n){Array.new(m)}
+                
+                c= Array.new(n){Array.new(m)}
+                
+                
+                            puts("\nLlenar Arreglo A")
+                            for i in (0...n)
+                                for j in (0...m)
+                                    print("A[#{i+1}][#{j+1}]: ")
+                                    a[i][j]= gets().to_i
+                                end
+                            end
+                    
+                            puts("\nLlenar Arreglo B")
+                            for i in (0...n)
+                                for j in (0...m)
+                                    print("B[#{i+1}][#{j+1}]: ")
+                                    b[i][j]= gets().to_i
+                                end
+                            end
+                    
+                            for i in (0...n)
+                                for j in (0...m)
+                                    c[i][j]= a[i][j] + b[i][j]
+                                end
+                            end
+                
+                            puts("\nArreglo Resultante")
+                            print("C= ")
+                            for i in (0...n)
+                                for j in (0...m)
+                                    print(c[i][j].to_s+ " ")
+                                end
+                                print("\n   ")
+                            end
+            </pre>
+            </div>
+    </main>
+
+    <div class="botones">
+            <ul >
+                <li class="atras"><a href="Tarea 14.html"><img src="imagenes/atras.png" alt=""></a></li>
+                <li class="adelante"><a href="Tarea 16.html"><img src="imagenes/adelante.png" alt=""></a></li>
+            </ul>
+        </div>
+
+        <div class="to-top"><a href="#Seccion1"><img src="imagenes/arriba.png" alt=""></a></div>
+
+    <footer>
+        <div class="container-footer-all">
+        <div class="container-body">
+            <div class="colum2">
+                <img src="imagenes/fabajo.png" alt="terry">
+            </div>
+        </div>
+        </div>
+        <div class="container-footer">
+            <div class="copyrght">
+                © 2020 Todos los Derechos Reservados | Axel Ortiz
+            </div>
+
+            <div class="informacion">1819000 | Lenguajes de Programacion | L-M-V: V6</div>
+        </div>
+    </footer>
+</body>
+</html>

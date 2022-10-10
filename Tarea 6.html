@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>AROF | Tarea 6</title>
+	 <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+</head>
+<body>
+
+    <header id="Seccion1" class="header4">
+    	<div class="header_menu">
+    		<div class="logo"> 
+    			<a href="index.html">
+    			<img src="imagenes/corona.png" alt="Corona"> </a>
+    		</div>
+    		<div class="menu_list">
+    			<ul>
+    				<li><a href="index.html" ><b>Inicio</b></a></li>
+    				<li><a href="Menu-Personal.html"><b>Personal</b></a></li>
+    				<li><a href="Menu-Tareas.html"><b>Tareas</b></a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class="textos">
+            <h1 class="titulo">TAREA 6: HASKELL</h1>
+            <h3 class="subtitulo">Investigar:</h3>
+            <ul>
+                <li>Símbolos, sintaxis y esqueleto</li>
+                <li>Aplicación a descargar para editar y ejecutar</li>
+                <li>A que tipo de paradigma pertenece</li>
+                <li>Un ejemplo de un programa escrito en ese lenguaje</li>
+            </ul>
+        </div>
+        <div class="sesgoabajo"></div>	
+    </header>
+    <main>
+    	<div class="acerca-de" id="seccion1">
+        <div class="Cont-tareas">
+        <ul class="mini-menu">
+            <li class="title">Menu</li>
+            <li><a href="#simbolos4">Simbolos</a></li>
+            <li><a href="#sintaxis4">Sintaxis</a></li>
+            <li><a href="#esqueleto4">Esqueleto</a></li>
+            <li><a href="#aplicacion4">Aplicación a descargar para editar y ejecutar</a></li>
+            <li><a href="#paradigma4">Tipo de paradigma</a></li>
+            <li><a href="#ejemplo4">Ejemplo de un programa</a></li>
+        </ul>
+        <br><br><hr>
+        <article id="simbolos4" class="simbolos1">
+        <hr><br>
+            <h3>Simbolos</h3><br>
+             <table>
+                <thead>
+                    <th>Simbolo</th><th>Significado</th>
+                </thead>
+                <tr>
+                    <td>::</td><td>"o :: t" quiere decir que el objeto "o" es miembro del tipo "t"</td>
+                </tr>
+                <tr>
+                    <td>$</td><td>Aplicaión</td>
+                </tr>
+                <tr>
+                    <td>-></td><td>"t -> s" es un tipo, específicamente una función, que consume algo de tipo "t" y produce algo de tipo "s".</td>
+                </tr>
+                <tr>
+                    <td>(->)</td><td>El operador (->) se nida por el derecho, ya que "t -> s -> r" quiere decir "t -> (s -> r)".</td>
+                </tr>
+                <tr>
+                    <td>:</td><td>Inserción en listas.</td>
+                </tr>
+                <tr>
+                    <td>++</td><td>Concatenación en listas.</td>
+                </tr>
+                <tr>
+                    <td>», »=</td><td>Composición secuencial de acciones.</td>
+                </tr>
+                <tr>
+                    <td>&&</td><td>Conjunción lógica</td>
+                </tr>
+                <tr>
+                    <td>&&</td><td>Disyunción lógica</td>
+                </tr>
+                <tr>
+                    <td>not</td><td>Negación lógica</td>
+                </tr>
+                <tr>
+                    <td>otherwise</td><td>Función constante que devuelve el valor True</td>
+                </tr>
+            </table><br><br><br><br><br><br>
+        </article>
+        <hr>
+        <article id="sintaxis4" class="sintaxis1">
+            <h3>Sintaxis</h3>
+            <br>
+            <ul>
+                <li><h4>El tipo Bool</h4>
+                    <p>Los valores con este tipo representan expresiones lógicas cuyo resultado puede ser True o False.</p>
+                </li>
+                <li><h4>El tipo Int</h4>
+                    <p>Los valores de este tipo son números enteros de precisión limitada que cubren al menos el intervalo [-2^29, 2^29 - 1] ([minBound, maxBound]).</p>
+                </li>
+                <li><h4>El tipo Integer</h4>
+                    <p>Los valores de este tipo son números enteros de precisión ilimitada que tienen las mismas funciones y operadores del tipo Int. </p>
+                </li>
+                <li><h4>El tipo Float</h4>
+                    <p>Los valores de este tipo son números reales. ( 2010, 23.4, 5.7 )</p>
+                </li>
+                <li><h4>El tipo Double</h4>
+                	<p>Los valores de este tipo son números reales, de mayor rango y con aproximaciones más precisas que los de tipo Float. </p>
+                </li>
+                <li><h4>El tipo Char</h4>
+                	<p>Los valores de este tipo son caracteres que se encuentran en una masa de alta complejidad de en una suma de caracteres dados con su alta definición. </p><br>
+                	<p>Antes de utilizar esta función en hugs debemos utilizar IMPORT CHAR antes de nuestro algoritmo. </p>
+                </li>
+                <li><h4>Tuplas</h4>
+                	<p>Los elementos que forman una tupla pueden ser del mismo o de distintos tipos. Es un conjunto de componentes relacionados. Por ejemplo: ('a', True,3) </p>
+                </li>
+                <li><h4>Listas</h4>
+                	<p>Los valores de este tipo son una colección de elementos del mismo tipo. Existen dos constructores para listas: </p>
+                	<ul class="ul">
+                        <li><p>[Elementos_separados_por_comas], por ejemplo: [1,2,3,4]</p></li>
+                        <li><p>[Elementos_separados_por_comas], por ejemplo: [1,2,3,4]</p></li>
+                    </ul>
+                </li>
+                <li><h4>Cadenas</h4>
+                	<ul class="ul">
+                        <li><p>"abc" – Cadena Unicode string, azúcar sintáctica de ['a','b','c'].</p></li>
+                        <li><p>'a' – Un solo caracter.</p></li>
+                    </ul>
+                </li>
+                <li><h4>Comentarios</h4>
+                	<p>Un comentario de una sola línea comienza con ‘--’ y se extiende hasta el final de la línea. Los comentarios de varias líneas comienzan con ’{-’ y se extienden hasta ’-}’. Los comentarios pueden ser anidados. Los comentarios antes de las definiciones de función deben comenzar con ‘{- |’ y los que están junto a los tipos de parámetros con ‘-- ^’ para que sean compatibles con Haddock, un sistema para documentar código en Haskell. </p>
+                </li>
+            </ul><br>
+        </article>
+        <hr>
+        <article id="esqueleto4" class="esqueleto1">
+        <br><br>
+        <h3>Esqueleto de los programas:</h3><br>
+            <div>
+            <code>
+            binOpApp binOp = op (EJEMPLO) <p style="color: lightblue">-- Librería a utilizar, en este caso “binOpApp binOp = op”, nos permite realizar operaciones matemáticas sencillas.</p><br>
+            main =<p style="color: lightblue">-- Aquí se escriben las operaciones y procedimientos a realizar por el programa.</p>
+            …………………………………………………………………………………………………………………<br>
+            ………[Instrucciones y procesos a realizar]………<br>
+             …………………………………………………………………………………………………………………<br>
+            </code>
+            </div><br>
+        </article>
+        <hr>
+        <article id="aplicacion4" class="aplicacion1">
+            <br><br>
+            <h3>Aplicación a descargar para editar y ejecutar </h3><br>            
+            <img src="imagenes/haskell.png" alt="Prolog"><br><br>
+            <p>Un editor de texto y un compilador de Haskell. Probablemente ya tienes instalado tu editor de texto favorito así que no vamos a perder el tiempo con esto. Ahora mismo, los dos principales compiladores de Haskell son GHC (Glasgow Haskell Compiler) y Hugs. Para los propósitos de esta guía usaremos GHC. No voy a cubrir muchos detalles de la instalación. En Windows es cuestión de descargarse el instalador, pulsar “siguiente” un par de veces y luego reiniciar el ordenador.</p><br>
+            <p>GHC toma un script de Haskell (normalmente tienen la extensión .hs) y lo compila, pero también tiene un modo interactivo el cual nos permite interactuar con dichos scripts. Podemos llamar a las funciones de los scripts que hayamos cargado y los resultados serán mostrados de forma inmediata. Para aprender es mucho más fácil y rápido en lugar de tener que compilar y ejecutar los programas una y otra vez. El modo interactivo se ejecuta tecleando ghci desde tu terminal. Si hemos definido algunas funciones en un fichero llamado, digamos, misFunciones.hs, podemos cargar esas funciones tecleando :l misFunciones, siempre y cuando misFunciones.hs esté en el mismo directorio en el que fue invocado ghci. Si modificamos el script .hs y queremos observar los cambios tenemos que volver a ejecutar :l misFunciones o ejecutar :r que es equivalente ya que recarga el script actual. Trabajaremos definiendo algunas funciones en un fichero .hs, las cargamos y pasamos el rato jugando con ellas, luego modificaremos el fichero .hs volviendo a cargarlo y así sucesivamente. Seguiremos este proceso durante toda la guía.</p><br><br>
+        </article>
+        <hr>
+        <article id="paradigma4" class="paradigma1">
+            <br><br>
+            <h3>A que tipo de paradigma pertenece</h3><br>
+            <p>Haskell es un lenguaje de programación funcional puro, de propósito general, que incluye muchas de las últimas innovaciones en el desarrollo de <b>los lenguajes de programación funcional.</b></p><br>
+            <p>Incluye muchas de las últimas innovaciones en el desarrollo de los lenguajes de programación funcional, como son las funciones de orden superior, evaluación perezosa, tipos polimórficos estáticos, tipos definidos por el usuario, encaje por patrones, y definiciones de listas. </p><br>
+            <p>Incorpora, además, otras características interesantes como el tratamiento sistemático de la sobrecarga, la facilidad en la definición de tipos abstractos de datos, el sistema de entrada/salida puramente funcional y la posibilidad de utilización de módulos. .</p><br>
+        </article>
+        <hr>
+        <article id="ejemplo4" class="ejemplo1">
+            <br><br>
+            <h3>Un ejemplo de un programa escrito en ese lenguaje</h3><br>
+            <div>
+            <code>binOpApp binOp = binOp<br><br>
+            main = <br>
+            let add = (+) <br>
+            sub = (-) <br>
+            in do<br><br>
+            putStrLn (show (binOpApp add 1 2))<br>
+            putStrLn (show (binOpApp sub 1 2))
+            </code>
+            </div>
+        </article>
+        <hr>
+        </div>
+        </div>    
+    </main>
+
+    <div class="botones">
+            <ul >
+                <li class="atras"><a href="Tarea 5.html"><img src="imagenes/atras.png" alt=""></a></li>
+                <li class="adelante"><a href="#"><img src="imagenes/adelante.png" alt=""></a></li>
+            </ul>
+        </div>
+
+        <div class="to-top"><a href="#Seccion1"><img src="imagenes/arriba.png" alt=""></a></div>
+
+    <footer>
+        <div class="container-footer-all">
+        <div class="container-body">
+            <div class="colum2">
+                <img src="imagenes/fabajo.png" alt="terry">
+            </div>
+        </div>
+        </div>
+        <div class="container-footer">
+            <div class="copyrght">
+                © 2020 Todos los Derechos Reservados | Axel Ortiz
+            </div>
+
+            <div class="informacion">1819000 | Lenguajes de Programacion | L-M-V: V6</div>
+        </div>
+    </footer>
+</body>
+</html>

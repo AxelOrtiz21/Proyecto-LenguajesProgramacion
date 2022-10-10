@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>AROF | Tarea 3</title>
+	 <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+</head>
+<body>
+
+    <header id="Seccion1" class="header4">
+    	<div class="header_menu">
+    		<div class="logo"> 
+    			<a href="index.html">
+    			<img src="imagenes/corona.png" alt="Corona"> </a>
+    		</div>
+    		<div class="menu_list">
+    			<ul>
+    				<li><a href="index.html" ><b>Inicio</b></a></li>
+    				<li><a href="Menu-Personal.html"><b>Personal</b></a></li>
+    				<li><a href="Menu-Tareas.html"><b>Tareas</b></a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class="textos">
+            <h1 class="titulo">TAREA 3: PROLOG</h1>
+            <h3 class="subtitulo">Investigar:</h3>
+            <ul>
+                <li>Símbolos, sintaxis y esqueleto</li>
+                <li>Aplicación a descargar para editar y ejecutar</li>
+                <li>A que tipo de paradigma pertenece</li>
+                <li>Un ejemplo de un programa escrito en ese lenguaje</li>
+            </ul>
+        </div>
+        <div class="sesgoabajo"></div>	
+    </header>
+    <main>
+    	<div class="acerca-de" id="seccion1">
+        <div class="Cont-tareas">
+        <ul class="mini-menu">
+            <li class="title">Menu</li>
+            <li><a href="#simbolos1">Simbolos</a></li>
+            <li><a href="#sintaxis1">Sintaxis</a></li>
+            <li><a href="#esqueleto1">Esqueleto</a></li>
+            <li><a href="#aplicacion1">Aplicación a descargar para editar y ejecutar</a></li>
+            <li><a href="#paradigma1">Tipo de paradigma</a></li>
+            <li><a href="#ejemplo1">Ejemplo de un programa</a></li>
+        </ul>
+        <br><br><hr>
+        <article id="simbolos1" class="simbolos1">
+            <br>
+            <h3>Simbolos</h3>
+            <br>
+            <p>
+                <ul class="s1">
+                    <li>X is Y %unificación con evaluación.</li>
+                    <li>X = Y %unificación simbólica</li>
+                    <li>X=:=Y %comparación con evaluación</li>
+                    <li>X == Y %comparación simbólica.</li>
+                </ul>
+            </p>
+            <br>
+             <table>
+                <thead>
+                    <th>Simbolo</th><th>Significado</th>
+                </thead>
+                <tr>
+                    <td>+</td><td>Suma</td>
+                </tr>
+                <tr>
+                    <td>-</td><td>resta</td>
+                </tr>
+                <tr>
+                    <td>*</td><td>Multiplicación</td>
+                </tr>
+                <tr>
+                    <td>**</td><td>Potencia</td>
+                </tr>
+                <tr>
+                    <td>/</td><td>Division real</td>
+                </tr>
+                <tr>
+                    <td>//</td><td>Division entera</td>
+                </tr>
+                <tr>
+                    <td>mod</td><td>Resto de division entera</td>
+                </tr>
+                <tr>
+                    <td>abs</td><td>valor absoluto</td>
+                </tr>
+                <tr>
+                    <td>^</td><td>Potencia</td>
+                </tr>
+                <tr>
+                    <td>max</td><td>valor maximo de dos</td>
+                </tr>
+                <tr>
+                    <td>min</td><td>valor minimo de dos</td>
+                </tr>
+            </table><br><br>
+        </article>
+        <hr>
+        <article id="sintaxis1" class="sintaxis1">
+            <h3>Sintaxis</h3><br>
+            <p>Un programa Prolog es un conjunto de cláusulas de Horn (hechos y reglas) donde:</p><br>
+            <ul>
+                <li>Todas las clausulas acaban con “ . ”</li>
+                <li>El símbolo <--  se escribe como “ :- “ que se lee como si (condicional). En 
+                    los hechos no es necesario (basta poner el átomo y “ . ”).</li>
+                <li>Los nombres de predicado y función siguen las pautas habituales de los 
+                    identificadores, pero comienzan con “minúscula”.</li>
+                <li>Los nombres de variable también siguen esas pautas, pero comienzan por 
+                    mayúscula.</li>
+                <li>Los atomos en el cuerpo de las reglas se separan mediante comas “ , ” que se 
+                    leen como “y”.</li>
+                <li>Ejecutar un programa no tiene sentido como tal (en principio). Lo que se hace 
+                    es plantear objetivos a resolver.</li>
+            </ul>
+        </article> 
+        <hr>
+        <article id="esqueleto1" class="esqueleto1">
+        <br><br>
+        <h3>Esqueleto de los programas:</h3><br>
+        <p>Existen dos tipos de cláusulas: Hechos y Reglas. Una regla es del tipo:</p><br>
+        <div align="center"><code>Cabeza :- Cuerpo.</code></div><br><br>
+        <p>y se lee como "La cabeza es verdad si el cuerpo es verdad". El cuerpo de una regla consiste en llamadas a predicados, que son llamados los objetivos de las reglas. El predicado ",/2" (es decir, un operador de paridad 2 (que recibe 2 argumentos) y de nombre , ) denota conjunción de objetivos, y el operador ";/2" denota disyunción. Conjunciones y disyunciones pueden sólo aparecer en el cuerpo, no en la cabeza de la regla.</p><br>
+        <p>Las cláusulas sin cuerpo (es decir, antecedente) son llamados hechos porque siempre son ciertos. Un ejemplo de un hecho es:</p><br>
+        <div align="center"><code>gato(tom).</code></div>
+        </article>
+        <br><br><hr><br><br>
+        <article id="aplicacion1" class="aplicacion1">
+            <h3>Aplicación a descargar para editar y ejecutar </h3><br><br>
+            <img src="imagenes/Prolog.png" alt="Prolog">
+            <p>Programa para editar: SWI-Prolog editor</p><br>
+            <p>Para   crear   un   ejecutable   existe   el   predicado   qsave_program/2.   Este predicado graba el estado actual del Prolog en el fichero que le indiquemos. La forma de crear el ejecutable será: en primer lugar, compilar el programa en Prolog y, en segundo lugar, llamar al predicado qsave_program/2. El   ejecutable   creado   se   deberá   acompañar   siempre   de   las   librerías adecuadas. En concreto, para Windows, cuando se lleve el ejecutable a otro ordenador, habrá que copiar también todos los ficheros con extensión dll que se encuentran en el directorio bin del SWI-Prolog.</p>
+        </article>
+        <hr><br><br>
+        <article id="paradigma1" class="paradigma1">
+            <h3>A que tipo de paradigma pertenece</h3><br>
+            <p>Prolog se enmarca en el <b>paradigma de los lenguajes lógicos y declarativos</b>. Se basa en la definición de reglas lógicas para luego, a través de un motor de inferencias lógicas, responder preguntas planteadas al sistema y así resolver los problemas. Este paradigma está dentro del paradigma de programación declarativa junto con el funcional.</p><br>
+            <p>Sus campos de aplicación principales son el área de Sistemas Expertos, e Inteligencia Artificial. La mayoría de los lenguajes de programación lógica se basan en la teoría lógica de primer orden, aunque también incorporan algunos comportamientos de orden superior como la lógica difusa.</p><br>
+            <p>Por su esencia declarativa, un programa lógico no tiene un algoritmo que indique los pasos que detallen la manera de llegar a un resultado, sino que es el sistema internamente el que proporciona la secuencia de control. No existe el concepto de asignación de variables, sino el de unificación.</p>
+        </article>
+        <hr><br><br>
+        <article id="ejemplo1" class="ejemplo1">
+            <h3>Un ejemplo de un programa escrito en ese lenguaje</h3><br>
+            <h4>Serie Finonacci</h4><br>
+            <div>
+            <code>% La sintaxis es fibonacci(N, F) -> Término N de la sucesión (el resultado se guarda en F). <br><br>
+            fibonacci(0, 0) :-!. <br>
+            fibonacci(1, 1) :-!. <br>
+            fibonacci(N ,F) :-N1 is N - 1, fibonacci(N1, F1),N2 is N - 2, fibonacci(N2, F2), F is F1 + F2. <br><br>
+            %el fibonacci se llama recursivamente dejando el resultado en F.
+            </code>
+            </div>
+        </article>
+        <hr>
+        </div>
+        </div>    
+    </main>
+    <div class="botones">
+            <ul >
+                <li class="atras"><a href="Tarea 2.html"><img src="imagenes/atras.png" alt=""></a></li>
+                <li class="adelante"><a href="Tarea 4.html"><img src="imagenes/adelante.png" alt=""></a></li>
+            </ul>
+        </div>
+
+        <div class="to-top"><a href="#Seccion1"><img src="imagenes/arriba.png" alt=""></a></div>
+
+        <footer>
+        <div class="container-footer-all">
+        <div class="container-body">
+            <div class="colum2">
+                <img src="imagenes/fabajo.png" alt="terry">
+            </div>
+        </div>
+        </div>
+        <div class="container-footer">
+            <div class="copyrght">
+                © 2020 Todos los Derechos Reservados | Axel Ortiz
+            </div>
+
+            <div class="informacion">1819000 | Lenguajes de Programacion | L-M-V: V6</div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

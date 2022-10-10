@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>AROF | Tarea 4</title>
+	 <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+</head>
+<body>
+
+    <header id="Seccion1" class="header4">
+    	<div class="header_menu">
+    		<div class="logo"> 
+    			<a href="index.html">
+    			<img src="imagenes/corona.png" alt="Corona"> </a>
+    		</div>
+    		<div class="menu_list">
+    			<ul>
+    				<li><a href="index.html" ><b>Inicio</b></a></li>
+    				<li><a href="Menu-Personal.html"><b>Personal</b></a></li>
+    				<li><a href="Menu-Tareas.html"><b>Tareas</b></a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class="textos">
+            <h1 class="titulo">TAREA 4: PYTHON</h1>
+            <h3 class="subtitulo">Investigar:</h3>
+            <ul>
+                <li>Símbolos, sintaxis y esqueleto</li>
+                <li>Aplicación a descargar para editar y ejecutar</li>
+                <li>A que tipo de paradigma pertenece</li>
+                <li>Un ejemplo de un programa escrito en ese lenguaje</li>
+            </ul>
+        </div>
+        <div class="sesgoabajo"></div>	
+    </header>
+    <main>
+    	<div class="acerca-de" id="seccion1">
+        <div class="Cont-tareas">
+        <ul class="mini-menu">
+            <li class="title">Menu</li>
+            <li><a href="#simbolos2">Simbolos</a></li>
+            <li><a href="#sintaxis2">Sintaxis</a></li>
+            <li><a href="#esqueleto2">Esqueleto</a></li>
+            <li><a href="#aplicacion2">Aplicación a descargar para editar y ejecutar</a></li>
+            <li><a href="#paradigma2">Tipo de paradigma</a></li>
+            <li><a href="#ejemplo2">Ejemplo de un programa</a></li>
+        </ul>
+        <br><br><hr>
+        <article id="simbolos2" class="simbolos1">
+        <hr><br>
+            <h3>Simbolos</h3><br>
+             <table>
+                <thead>
+                    <th>Simbolo</th><th>Significado</th>
+                </thead>
+                <tr>
+                    <td>+</td><td>Suma</td>
+                </tr>
+                <tr>
+                    <td>-</td><td>resta</td>
+                </tr>
+                <tr>
+                    <td>-</td><td>negación</td>
+                </tr>
+                <tr>
+                    <td>*</td><td>Multiplicación</td>
+                </tr>
+                <tr>
+                    <td>**</td><td>Potencia</td>
+                </tr>
+                <tr>
+                    <td>/</td><td>Division real</td>
+                </tr>
+                <tr>
+                    <td>//</td><td>Division entera</td>
+                </tr>
+                <tr>
+                    <td>%</td><td>Resto de division entera(modulo)</td>
+                </tr>
+                <tr>
+                    <td>==</td><td>Es igual que</td>
+                </tr>
+                <tr>
+                    <td>!=</td><td>Es distinto que</td>
+                </tr>
+                <tr>
+                    <td><</td><td>Es menor que</td>
+                </tr>
+                <tr>
+                    <td><=</td><td>Meno o igual que</td>
+                </tr>
+                <tr>
+                    <td>></td><td>Es mayor que</td>
+                </tr>
+                <tr>
+                    <td>>=</td><td>Es mayor o igual que</td>
+                </tr>
+            </table><br><br><br><br><br><br>
+        </article>
+        <hr>
+        <article id="sintaxis2" class="sintaxis1">
+            <h3>Sintaxis</h3>
+            <br>
+            <ul>
+                <li>Comentarios: detrás de #</li>
+                <li>Asignación: se usa =<br>Ej: <br>
+                    <div>
+                    <code>
+                    >>>a=3+2J <br>
+                    >>> # Esto es un comentario <br>
+                    >>>B=7#asignación <br>
+                    </code>
+                    </div>
+                </li>
+                <li>Definición de funciones
+                    <br><br>
+                    <div>
+                    <code>
+                    >>>def nombrefunción(arg1,arg2..) <br>
+                    ...instrucción1<br>
+                    ...instrucción2<br>
+                    .................<br>
+                    ....instrucciónN<br>
+                    ...<br>
+                    </code>
+                    </div><br>
+                    La indentación delimita qué instrucciones pertenecen a la función.A no ser que se use return, la función devuelve None.
+                </li>
+                <li>If: <br><br>
+                    <div>
+                    <code>
+                    >>>if condicion: <br>
+                        ...instrucciones...<br>
+                    elif condicion:<br>
+                        ...instrucciones...<br>
+                    else:<br>
+                        ...instrucciones...<br>
+                    </code>
+                    </div>
+                </li>
+                <li>For: <br><br>
+                    <div>
+                    <code>
+                    >>>for variable in variable_lista:<br>
+                        ...instrucciones<br>
+                    ...<br>
+                    </code>
+                    </div><br>
+                    Range: usado de la forma range( i ) genera la lista[ 0, 1, ..., i ]. <br>
+                    Usado de la forma range( i, j ) genera la lista[ i, i+1, ..., j-1 ].
+
+                </li>
+                <li>Filter(función, lista_arg) devuelve una lista con los elementos x de lista_arg 
+                    que cumplen f(x) = true. <br><br>
+                    <div>
+                    <code>
+                    >>>def f(x): return x%2 != 0 and x%3 != 0<br>
+                        ...<br>
+                    >>>filter(f, range(2,25))<br>
+                    [5,7,11,13,17,19,23] <br>
+                    </code>
+                    </div><br>
+                </li>
+                <li>map(función, lista_arg) devuelve la lista: <br><br>
+                    <div>
+                    <code>
+                    [f(lista_arg[0]),f(lista_arg[1]),...,f(lista_arg[n])]<br>
+                        >>>def cubo(x): return x*x*x<br>
+                        ...<br>
+                    >>>map(cubo, range(1,5))[1,8,27,64]<br>
+                    </code>
+                    </div><br>
+                </li>
+                <li>List Comprehensions:  operaciones muy intuitivas con listas <br><br>
+                    <div>
+                    <code>
+                    >>>vec= [2,4,6]<br>
+                    >>>[3 * x for x in vec] [6,12,18]<br>
+                    >>>[3 * x for x in vecif x > 3] [12,18]<br>
+                    >>>[[x,x**2] for x in vec][[2,4],[4,16],[6,36]]<br>
+                    </code>
+                    </div><br>
+                </li>
+                <li>Definición y uso de Clases: <br><br>
+                    <div>
+                    <code>
+                    >>>class NombreDeClase:<br>
+                        ...sentencia1<br>
+                        ...............<br>
+                        ...sentenciaN<br>
+                        ...<br>
+                        >>>variable = NombreDeClase()<br>
+                    </code>
+                    </div><br>
+                </li>
+                <li>Las variables de instancia no necesitan declararse. <br><br>
+                    <div>
+                    <code>
+                    >>>x=MiClase()<br>
+                    >>>x.numero=7<br>
+                    ...............<br>
+                    x.f() equivalea MiClase.f(x)<br>
+                    >>>MiClase.f(x)<br>
+                    “holamundo”<br>
+                    </code>
+                    </div><br>
+                </li>
+                <li>Para definir una subclase se escribe: <br><br>
+                    <div>
+                    <code>
+                    class NombreDeClase(NombreSubclase)<br>
+                    </code>
+                    </div><br>
+                    Se heredan funciones y variables de clase.
+                </li>
+                <li>Es muy fácil dotar de herencia múltiple, basta con incluir más clases como 
+                    argumentos en la definición: <br><br>
+                    <div>
+                    <code>
+                    >>>class MiSubClase(Superclase1, Superclase2,...)<br>
+                    </code>
+                    </div><br>
+                    A la hora de resolver un mensajea un objeto de MiSubClase se buscará el método en la propia clase, sino se encuentra se busca en Superclase1 (y en sus súper clases), luego en Superclase2, etc.
+                </li>
+            </ul><br>
+        </article>
+        <hr>
+        <article id="esqueleto2" class="esqueleto1">
+        <br><br>
+        <h3>Esqueleto de los programas:</h3><br>
+        <p>La versión que recomendaríamos como esqueleto básico de programa ejecutable sería:</p><br>
+            <div>
+            <code>
+            #!/bin/env python<br>
+            print "Hola mundo"<br>
+            </code>
+            </div><br>
+        <p>Este fichero puede ser hecho ejecutable y ser ejecutado sin tener que escribir python dado que el propio fichero indica cómo buscar el comando python en el sistema.</p><br>
+            <div>
+            <code>
+            $ chmod u+x hola_mundo.py <br>
+            $ ./hola_mundo.py <br>
+            Hola mundo <br>
+            $ python hola_mundo.py <br>
+            Hola mundo <br>
+            </code>
+            </div><br>
+        <p>Cuando hemos ejecutado el fichero directamente lo hemos hecho dando la ruta relativa completa al fichero (./hola_mundo.py). Hemos de hacerlo así porque normalmente el directorio de trabajo no se encuentra en el $PATH que el shell utiliza para buscar los ficheros ejecutables. Si hubiésemos intentado ejecutarlo directamente habríamos obtenido un error:</p><br>
+            <div>
+            <code>
+            $ hola_mundo.py<br>
+            hola_mundo.py: orden no encontrada<br>
+            </code>
+            </div><br>
+        </article>
+        <hr>
+        <article id="aplicacion2" class="aplicacion1">
+            <br><br>
+            <h3>Aplicación a descargar para editar y ejecutar </h3><br>            
+            <img src="imagenes/python.png" alt="Prolog"><br><br>
+            <p>El paquete de instalación de Python, disponible para sistemas de 32 y 64 bits, dispone de ejemplos y documentación, así como de IDLE, un sencillo entorno de desarrollo para los scripts.</p><br>
+            <p>Para seguir la tradición informática lo primero que vamos a hacer es escribir un programa que imprima “Hola mundo”. Para ello vamos a abrir un intérprete de comandos de Python escribiendo python en la línea de comandos:</p><br><br>
+                <div>
+                <code>
+                $ python<br>
+                Python 2.6.6 (r266:84292, Sep 15 2010, 16:22:56)<br>
+                [GCC 4.4.5] on linux2<br>
+                Type "help", "copyright", "credits" or "license" for more information.<br>
+                >>> print('hola mundo')<br>
+                hola mundo<br>
+                >>><br>
+                </code>
+                </div><br>
+            <p>Al ejecutar el comando python sin ningún argumento extra se abre un interprete en el que podemos ejecutar comandos en Python. En el caso del ejemplo nos indica que estamos utilizando la versión 2.6.6 del lenguaje. Python tiene distintas versiones, la más moderna es la 3.3, pero las más utilizadas son todavía las de la serie 2.x. Este curso está escrito para las versiones 2.x porque las 3.x todavía no son usadas ampliamente. De todos modos las diferencias entre ambas versiones son mínimas y lo que vamos a ver en el curso es aplicable a ambas.</p><br>
+            <p>Este es un prompt similar al del shell al que ya estamos acostumbrados. Python nos indica que está listo para recibir órdenes. Si escribimos una orden como print(‘hola mundo’), Python la ejecutará y nos mostrará el resultado:</p><br>
+                <div>
+                <code>
+                >>> print('Hola mundo!')<br>
+                Hola mundo!<br>
+                </code>
+                </div><br>
+            <p>Una vez cumplida nuestra primera misión podemos salir del intérprete de Python escribiendo quit() o pulsando las teclas control y d.</p><br>
+            <p>python es el intérprete que se distribuye con el lenguaje, pero como interprete interactivo IPython nos puede resultar más útil. IPython colorea la sintaxis y completa los comandos por nosotros pulsando la tecla tabulador.</p><br>
+            <p>Aunque el intérprete de python es muy útil, normalmente los programas no los vamos a escribir utilizándolo. Python tiene otro modo de ejecutar los comandos. Lo que haremos será escribir los comandos uno tras otro en un fichero de texto y después le pediremos a python que los ejecute secuencialmente. Por ejemplo, podemos crear el siguiente fichero utilizando un editor de textos:</p><br>
+                <div>
+                <code>
+                hola_mundo.py:<br>
+                print("Hola mundo")<br>
+                </code>
+                </div><br> 
+            <p>Una vez escrito y guardado el fichero podemos ejecutarlo escribiendo lo siguiente en la línea de comandos:</p><br>
+                <div>
+                <code>
+                $ python hola_mundo.py<br>
+                Hola mundo<br>
+                </code>
+                </div><br>
+            <p>La ventaja de este sistema frente al del interprete es que el programa queda escrito en un fichero y lo podemos ejecutar tantas veces como queramos sin tener que reescribirlo.</p><br>
+            <p>Normalmente haremos que los ficheros que contienen código Python tengan la extensión .py. Esto no es un requisito obligatorio, pero nuestro trabajo será más sencillo si lo hacemos así.</p><br>
+        </article>
+        <hr>
+        <article id="paradigma2" class="paradigma1">
+            <br><br>
+            <h3>A que tipo de paradigma pertenece</h3><br>
+            <p>Python es un lenguaje de programación multiparadigma. Esto significa que más que forzar a los programadores a adoptar un estilo particular de programación, permite varios estilos: <b>programación orientada a objetos, programación imperativa y programación funcional</b>. Otros paradigmas están soportados mediante el uso de extensiones.</p><br>
+            <p>Python usa tipado dinámico y conteo de referencias para la administración de memoria. Una característica importante de Python es la resolución dinámica de nombres; es decir, lo que enlaza un método y un nombre de variable durante la ejecución del programa (también llamado enlace dinámico de métodos).</p><br>
+            <p>Otro objetivo del diseño del lenguaje es la facilidad de extensión. Se pueden escribir nuevos módulos fácilmente en C o C++. **Python **puede incluirse en aplicaciones que necesitan una interfaz programable.</p><br>
+            <p>Aunque la programación en Python podría considerarse en algunas situaciones hostil a la programación funcional tradicional del Lisp, existen bastantes analogías entre Python y los lenguajes minimalistas de la familia Lisp como puede ser Scheme.</p><br>
+        </article>
+        <hr>
+        <article id="ejemplo2" class="ejemplo1">
+            <br><br>
+            <h3>Un ejemplo de un programa escrito en ese lenguaje</h3><br>
+            <h4>25 primeros numeros naturales</h4><br>
+            <div>
+            <code>###Programa que imprima los 25 primeros numeros naturales<br><br>
+            n = 1 <br>
+            while n <= 25: <br>
+            print n, <br>
+            n += 1 <br><br>
+            ###n es el iterador del ciclo while
+            </code>
+            </div>
+        </article>
+        <hr>
+        </div>
+        </div>    
+    </main>
+
+    <div class="botones">
+            <ul >
+                <li class="atras"><a href="Tarea 3.html"><img src="imagenes/atras.png" alt=""></a></li>
+                <li class="adelante"><a href="Tarea 5.html"><img src="imagenes/adelante.png" alt=""></a></li>
+            </ul>
+        </div>
+
+        <div class="to-top"><a href="#Seccion1"><img src="imagenes/arriba.png" alt=""></a></div>
+
+    <footer>
+        <div class="container-footer-all">
+        <div class="container-body">
+            <div class="colum2">
+                <img src="imagenes/fabajo.png" alt="terry">
+            </div>
+        </div>
+        </div>
+        <div class="container-footer">
+            <div class="copyrght">
+                © 2020 Todos los Derechos Reservados | Axel Ortiz
+            </div>
+
+            <div class="informacion">1819000 | Lenguajes de Programacion | L-M-V: V6</div>
+        </div>
+    </footer>
+</body>
+</html>

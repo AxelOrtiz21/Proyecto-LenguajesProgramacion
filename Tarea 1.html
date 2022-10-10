@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>AROF | Tarea 1</title>
+	 <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+</head>
+<body>
+
+    <header id="Seccion1" class="header4">
+    	<div class="header_menu">
+    		<div class="logo"> 
+    			<a href="index.html">
+    			<img src="imagenes/corona.png" alt="Corona"> </a>
+    		</div>
+    		<div class="menu_list">
+    			<ul>
+    				<li><a href="index.html" ><b>Inicio</b></a></li>
+    				<li><a href="Menu-Personal.html"><b>Personal</b></a></li>
+    				<li><a href="Menu-Tareas.html"><b>Tareas</b></a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class="textos">
+            <h1 class="titulo">TAREA 1</h1>
+            <h3 class="subtitulo">Investigar:</h3>
+            <ul>
+                <li>¿Qué es un paradigma? </li>
+                <li>¿Cuáles son los Paradigmas de los Lenguajes de Programación?</li>
+            </ul>
+        </div>
+        <div class="sesgoabajo"></div>	
+    </header>
+    <main>
+    	<div class="acerca-de" id="seccion1">
+            <div class="Cont-tareas">
+                <h3 class="info">¿Qué es un paradigma?</h3>
+                <p>Como paradigma denominamos todo aquel modelo, patrón o ejemplo que debe seguirse en determinada situación. La palabra, como tal, proviene del griego παράδειγμα (parádeigma). En un sentido amplio, se refiere a una teoría o conjunto de teorías que sirve de modelo a seguir para resolver problemas o situaciones determinadas que se planteen.</p>
+                <br>
+                <p>Un<b> paradigma de programación</b> se refiere a la forma en que un programador o un conjunto de programadores dan solución a uno o varios problemas claramente definidos. En este sentido, representa una manera particular de ofrecer soluciones.</p>
+                <br><br>
+                <h3 class="info">¿Cuáles son los Paradigmas de los Lenguajes de Programación?</h3><br>
+                <ul>
+            <li><p>El <b>paradigma por procedimientos</b>, es tal vez el más conocido y utilizado 
+                en el proceso de programación, donde los programas se desarrollan a través de procedimientos. Pascal C y BASIC son tres de los lenguajes imperativos más importantes. La palabra latina imperare significa "dar instrucciones".</p>
+                <br>
+                <p>El paradigma se inició al principio del año 1950 cuando los diseñadores reconocieron que las variables y los comandos o instrucciones de asignación constituían una simple pero útil abstracción del acceso a memoria y actualización del conjunto de instrucciones máquina. Debido a la estrecha relación con la arquitectura de la máquina, los lenguajes de programación imperativa pueden ser implementados muy eficientemente, al menos en principio.</p><br></li>
+            <li><p>El <b>paradigma imperativo</b> aún tiene cierto dominio en la actualidad.
+                Una buena parte del software actual ha sido desarrollado y escrito en lenguajes imperativos. La gran mayoría de programadores profesionales son principalmente o exclusivamente programadores imperativos (Hay que añadir que los paradigmas de la programación concurrente y orientada al objeto son en realidad sub-paradigmas de la programación imperativa, así que sus adeptos también son programadores imperativos).</p><br></li>
+            <li><p>El <b>paradigma declarativo o paradigma de programación lógica</b> se basa en 
+                el  hecho que un programa implementa una relación antes que una correspondencia. Debido a que las relaciones son mas generales que las correspondencias (identificador - dirección de memoria), la programación lógica es potencialmente de más alto nivel que la programación funcional o la imperativa. El lenguaje más popular enmarcado dentro de este paradigma es el lenguaje PROLOG. El auge del paradigma declarativo se debe a que el área de la lógica formal de las matemáticas ofrece un sencillo algoritmo de resolución de problemas adecuado para, usarse en un sistema de programación declarativo de propósito general.</p><br></li>
+            <li><p>Si la programación imperativa se caracteriza por el uso de variables, comandos y
+                procedimientos, la programación funcional se caracteriza por el uso de expresiones y funciones. Un programa dentro del <b>paradigma funcional</b>, es una función o un grupo de funciones compuestas por funciones más simples estableciéndose que una función puede llamar a otra, o el resultado de una función puede ser usado como argumento de otra función. El lenguaje por excelencia ubicado dentro de este paradigma es el LISP. Por ejemplo si se desea obtener la nota promedio de un alumno podría construirse una función promedio la cual se obtendría a partir de otras funciones más simples: una (sumar) la cual obtiene la suma de las entradas de la lista, otra (contar) la cual cuenta el número de entradas de la lista y la tercera (dividir) que obtiene el cociente de los valores anteriores, su sintaxis será:</p>
+                <br>
+                <p>(dividir (sumar notas) (contar notas))</p>
+                <br>
+                <p>Obsérvese que la estructura anidada refleja el hecho de que la función dividir actúa sobre los resultados de suma y contar.</p><br></li>
+            <li><p>El <b>paradigma orientado a objetos</b>, se basa en los conceptos de 
+                objetos y clases de objetos. Un objeto es una variable equipada con un conjunto de operaciones que le pertenecen o están definidas para ellos. El paradigma orientado a objetos actualmente es el paradigma más popular y día a día los programadores, estudiantes y profesionales tratan de tomar algún curso que tenga que ver con este paradigma, podría decirse, que programar orientado a objetos está de moda.</p>
+                <br>
+                <p>Una de las bondades importantes de los lenguajes orientados a objetos es que las definiciones de los objetos pueden usarse una y otra vez para construir múltiples objetos con las mismas propiedades o modificarse para construir nuevos objetos con propiedades similares pero no exactamente iguales.</p>
+                <br>
+                <p>Pero que es exactamente un lenguaje orientado a objetos- Los siguientes conceptos señalan las características generalmente aceptadas acerca de los lenguajes orientados a objetos.</p>
+                <br>
+                <ul class="ul">
+                    <li><p>Objetos y clases son obviamente los conceptos fundamentales. Una clase es un conjunto de objetos que comparten las mismas operaciones.</p><br></li>
+                    <li><p>Objetos (o al menos referencia a objetos) deben ser valores de la clase base. Así, cualquier operación puede tomar un objeto como un argumento y puede devolver un objeto como resultado. De esta manera el concepto de clase de objetos está relacionado con el concepto de tipo de dato.</p><br></li>
+                    <li><p>Herencia es también vista como un concepto clave dentro del mundo de los objetos. En este contexto, la herencia es la habilidad para organizar las clases de objetos en una jerarquía de subclases y superclases y las operaciones dadas para una clase se pueden aplicar a los objetos de la subclase.</p><br></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+        </div>    
+    </main>
+    <div class="botones">
+            <ul >
+                <li class="atras"><a href="Menu-Tareas.html"><img src="imagenes/atras.png" alt=""></a></li>
+                <li class="adelante"><a href="Tarea 2.html"><img src="imagenes/adelante.png" alt=""></a></li>
+            </ul>
+        </div>
+
+        <div class="to-top"><a href="#Seccion1"><img src="imagenes/arriba.png" alt=""></a></div>
+
+        <footer>
+        <div class="container-footer-all">
+        <div class="container-body">
+            <div class="colum2">
+                <img src="imagenes/fabajo.png" alt="terry">
+            </div>
+        </div>
+        </div>
+        <div class="container-footer">
+            <div class="copyrght">
+                © 2020 Todos los Derechos Reservados | Axel Ortiz
+            </div>
+
+            <div class="informacion">1819000 | Lenguajes de Programacion | L-M-V: V6</div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

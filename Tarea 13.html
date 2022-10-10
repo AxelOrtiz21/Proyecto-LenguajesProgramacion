@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>AROF | Tarea 13</title>
+	 <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+</head>
+<body>
+
+    <header id="Seccion1" class="header4">
+    	<div class="header_menu">
+    		<div class="logo"> 
+    			<a href="index.html">
+    			<img src="imagenes/corona.png" alt="Corona"> </a>
+    		</div>
+    		<div class="menu_list">
+    			<ul>
+    				<li><a href="index.html" ><b>Inicio</b></a></li>
+    				<li><a href="Menu-Personal.html"><b>Personal</b></a></li>
+    				<li><a href="Menu-Tareas.html"><b>Tareas</b></a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class="textos">
+            <h1 class="titulo">TAREA 13</h1>
+            <h3 class="subtitulo">Búsqueda en Vector</h3>
+        </div>
+        <div class="sesgoabajo"></div>	
+    </header>
+    <main>
+    	<div class="acerca-de" id="seccion1">
+        <div class="Cont-tareas">
+            <h2 style="font-family: Lucida Console">Descripción</h2>
+            <ul class="programas">
+                <li>Elaborar un programa en JAVA y RUBY que realice una búsqueda de un número en un vector, mostrando solamente un mensaje indicando cuantas veces apareció el número. Además de imprimir el vector
+                </li><br>
+                <li>Ejemplo: <br>
+                    Valor a buscar: 4 <br>
+                    “El número 4 aparece 2 veces en el vector: ” <br>
+                       [1 4 7 9 21 4 0 2 5 2]
+                </li>
+            </ul><br><br>
+
+        </div>
+        </div>
+        <div class="code">
+            <h3>Java</h3><br><br>
+            <pre>
+            /*  
+            Nombre: Axel Ramon Ortiz Flores Matricula: 1819000 Hora: V6
+            Tarea 13: Busqueda en vector
+            */
+            import javax.swing.JOptionPane;
+
+            public class Tarea13{
+
+                public static void main(String[] args) {
+                    int i, n, b, c=0;
+                    int[] A;
+                    String letrero="";
+                    String entrada;
+
+                    entrada= JOptionPane.showInputDialog("Ingrese el tamaño del arreglo: ");
+                    n= Integer.parseInt(entrada);
+
+                    A= new int[n];
+
+                    for(i=0; i&lt n; i++){
+                        entrada= JOptionPane.showInputDialog("Ingrese A["+(i+1)+"]: ");
+                        A[i]= Integer.parseInt(entrada);
+                    }
+
+                    entrada= JOptionPane.showInputDialog("Ingrese el numero a buscar: ");
+                    b= Integer.parseInt(entrada);
+
+                    for (i=0; i&lt n; i++){
+                        if(A[i]==b){
+                            c=c+1;
+                        }
+                    }
+
+                    for(i=0; i&lt n; i++){
+                        letrero= letrero+A[i]+", "; 
+                     }
+
+                    letrero="El valor "+b+" aparece "+c+" veces en el vector: \n"+"A= ["+letrero+"]";
+
+                    JOptionPane.showMessageDialog(null, letrero);
+                }
+            }
+            </pre>
+            </div><br>
+                    <div class="code">
+            <h3>Ruby</h3><br><br>
+            <pre>
+            =begin 
+            Nombre: Axel Ramon Ortiz Flores  Matr.1819000  Hora:V6
+            Tarea 13:Busqueda en vector
+            =end
+            
+            print("Ingresa un numero total de datos: ")
+            n=gets().to_i
+            a = Array.new(n)
+            c=0
+            
+                for i in (0...n)
+                    print("Ingresa a[#{i+1}]: ")
+                    a[i] = gets().to_i
+                end
+            
+                print("\nIngrese el numero a buscar: ")
+                x=gets().to_i
+            
+                for i in (0...n)
+                    if (a[i]==x)then
+                        c=c+1  
+                    end
+                end
+            
+                print("\nEl numero #{x} aparece #{c} veces en el vector:\n")
+                print("A=[")
+                for i in (0...n)
+                    print(a[i].to_s+ ", ")
+                end
+                puts("]")
+
+            </pre>
+            </div> 
+    </main>
+
+    <div class="botones">
+            <ul >
+                <li class="atras"><a href="Tarea 12.html"><img src="imagenes/atras.png" alt=""></a></li>
+                <li class="adelante"><a href="Tarea 14.html"><img src="imagenes/adelante.png" alt=""></a></li>
+            </ul>
+        </div>
+
+        <div class="to-top"><a href="#Seccion1"><img src="imagenes/arriba.png" alt=""></a></div>
+
+    <footer>
+        <div class="container-footer-all">
+        <div class="container-body">
+            <div class="colum2">
+                <img src="imagenes/fabajo.png" alt="terry">
+            </div>
+        </div>
+        </div>
+        <div class="container-footer">
+            <div class="copyrght">
+                © 2020 Todos los Derechos Reservados | Axel Ortiz
+            </div>
+
+            <div class="informacion">1819000 | Lenguajes de Programacion | L-M-V: V6</div>
+        </div>
+    </footer>
+</body>
+</html>

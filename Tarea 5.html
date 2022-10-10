@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>AROF | Tarea 5</title>
+	 <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+</head>
+<body>
+
+    <header id="Seccion1" class="header4">
+    	<div class="header_menu">
+    		<div class="logo"> 
+    			<a href="index.html">
+    			<img src="imagenes/corona.png" alt="Corona"> </a>
+    		</div>
+    		<div class="menu_list">
+    			<ul>
+    				<li><a href="index.html" ><b>Inicio</b></a></li>
+    				<li><a href="Menu-Personal.html"><b>Personal</b></a></li>
+    				<li><a href="Menu-Tareas.html"><b>Tareas</b></a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class="textos">
+            <h1 class="titulo">TAREA 5: SCHEME</h1>
+            <h3 class="subtitulo">Investigar:</h3>
+            <ul>
+                <li>Símbolos, sintaxis y esqueleto</li>
+                <li>Aplicación a descargar para editar y ejecutar</li>
+                <li>A que tipo de paradigma pertenece</li>
+                <li>Un ejemplo de un programa escrito en ese lenguaje</li>
+            </ul>
+        </div>
+        <div class="sesgoabajo"></div>	
+    </header>
+    <main>
+    	<div class="acerca-de" id="seccion1">
+        <div class="Cont-tareas">
+        <ul class="mini-menu">
+            <li class="title">Menu</li>
+            <li><a href="#simbolos3">Simbolos</a></li>
+            <li><a href="#sintaxis3">Sintaxis</a></li>
+            <li><a href="#esqueleto3">Esqueleto</a></li>
+            <li><a href="#aplicacion3">Aplicación a descargar para editar y ejecutar</a></li>
+            <li><a href="#paradigma3">Tipo de paradigma</a></li>
+            <li><a href="#ejemplo3">Ejemplo de un programa</a></li>
+        </ul>
+        <br><br><hr>
+        <article id="simbolos3" class="simbolos1">
+        <hr><br>
+            <h3>Simbolos</h3><br>
+             <table>
+                <thead>
+                    <th>Simbolo</th><th>Significado</th>
+                </thead>
+                <tr>
+                    <td>+</td><td>Suma cada uno de los argumentos. Ejemplo: (+ 1 2 3)=6</td>
+                </tr>
+                <tr>
+                    <td>-</td><td>Primer argumento menos los restantes o negación del número. Ejemplo: (- 5.3 2)=3.3</td>
+                </tr>
+                <tr>
+                    <td>*</td><td>Multiplica cada uno de los argumentos. Ejemplo: (* 1 2 3)=6</td>
+                </tr>
+                <tr>
+                    <td>/</td><td>Primer argumento entre cada uno de los restantes. Ejemplo:  (/ 6 3)=2</td>
+                </tr>
+                <tr>
+                    <td>abs</td><td>Valor absoluto del argumento. Ejemplo: (abs -4)=4</td>
+                </tr>
+                <tr>
+                    <td>exp</td><td>Exponencial. Ejemplo: (expt 2 3)=8</td>
+                </tr>
+                <tr>
+                    <td>max</td><td>Máximo de sus argumentos. Ejemplo: (max 1 3 4 2 3)=4</td>
+                </tr>
+                <tr>
+                    <td>min</td><td>Mínimo de sus argumentos. Ejemplo: (min 1 3 4 2 3)=1</td>
+                </tr>
+            </table><br><br><br><br><br><br>
+        </article>
+        <hr>
+        <article id="sintaxis3" class="sintaxis1">
+            <h3>Sintaxis</h3>
+            <br>
+            <ul>
+                <li><b>Comentarios:</b> Para agregar un comentario en Scheme se inicia con un punto y coma 
+                	(;) y 
+                    continúan hasta el final de la línea</li>
+                <li><b>Variables:</b>Las variables son dinámicamente tipadas. Para asociarlas a un 
+                	valor concreto, podemos usar define, una expresión let, o alguna de sus variantes. Las variables asignadas en el primer nivel usando define están en ámbito global (es decir, son visibles en el resto de programa).<br><br>
+                    <div>
+                    <code>
+                    (define var1 value)<br>
+                    </code>
+                    </div><br>
+                    Las variables asignadas mediante "let" ven su ámbito reducido al cuerpo de dicho "let": <br><br>
+                    <div>
+                    <code>
+                    (let ((var1 value))<br>
+                    ........<br>
+                    ámbito de var1<br>
+                    .......) <br>
+                    </code>
+                    </div><br>
+                </li>
+                <li><b>Procedimientos:</b>Las funciones o procedimientos son objetos de primera clase en 
+                	Scheme. Pueden ser asignados a variables. Por ejemplo, una función de dos argumentos arg1 y arg2 puede definirse como: 
+                    <br><br>
+                    <div>
+                    <code>
+                    (define fun <br>
+                    (lambda (arg1 arg2)<br>
+                    ....))<br>
+                    </code>
+                    </div><br>
+                    o en la forma abreviada equivalente: <br><br>
+                    <div>
+                    <code>
+                    (define (fun arg1 arg2) <br>
+                    ....)<br>
+                    </code>
+                    </div><br>
+                    Las llamadas a función tienen la sintaxis siguiente: <br><br>
+                    <div>
+                    <code>
+                    (define (fun arg1 arg2) <br>
+                    ....)<br>
+                    </code>
+                    </div><br>
+                    Como vemos, la función invocada se encuentra en primer lugar, seguida de los argumentos de la llamada, formando una lista. Podemos también utilizar el procedimiento apply, que toma dos argumentos: el primero es el procedimiento que queremos invocar, mientras que el segundo es la lista de argumentos. Así, la anterior llamada a función puede escribirse, de forma equivalente, como: <br><br>
+                    <div>
+                    <code>
+                    (apply fun (list value1 value2))
+                    </code>
+                    </div><br> 
+                </li>
+                <li><b>Listas:</b>Scheme usa listas enlazadas de forma análoga a otros dialectos de Lisp.<br>    <br>
+                    Téngase en cuenta que la utilización de listas es mucho más sencilla que en otros lenguajes de programación tales como C, C++ y Pascal. 
+                </li>
+                <li><b>Tipos de datos: </b>Otros tipos de datos en Scheme son los enteros, racionales, 
+                	reales, complejo, símbolos, cadenas, y puertos, listas asociativas, tablas hash, vectores, array y estructuras.<br><br>
+                	La mayoría de implementaciones proporciona lo que se conoce como una torre numéric completa, así como aritmética exacta e inexacta. <br><br>
+                	Los símbolos pueden ser definidos de varias maneras, siendo <br><br>
+                    <div>
+                    <code>
+                    'symbol<br>
+                    (string->symbol "symbol")<br>
+                    </code>
+                    </div><br>
+                    las más comunes.
+                </li>
+                <li><b>Igualadad. </b>Scheme tiene diferentes tipos de igualdad:
+                	<ul class="ul">
+                        <li><b>eq? -> </b>Devuelve #t si los dos objetos son exactamente el mismo objeto, comprobando incluso dónde están guardados físicamente.</li>
+                        <li><b>eqv? -> </b>Normalmente igual que eq?, pero trata algunos objetos (por ejemplo, caracteres y números) de forma especial para que los números que sean iguales sean eqv? incluso si no son eq?.</li>
+                        <li><b>equal? -> </b>Compara el contenido de las estructuras de datos tales como listas, vectores y cadenas para determinar si son iguales.</li>
+                        <li><b>string=? -> </b>Compara dos cadenas</li>
+                        <li><b>char=? -> </b>Compara dos caracteres</li>
+                        <li><b>= -> </b>Compara números</li>
+                    </ul>
+                </li>
+                <li><b>Estructuras de control</b><br>
+                	<ul class="ul">
+                        <li><b>Evaluación condicional</b><br><br>
+                        	<div>
+                            <code>
+                            (cond (prueba1 expr1)<br>
+                            ......(prueba2 expr2)<br>
+                            ...<br>
+                            ......(else exprn))<br>
+                            </code>
+                            </div><br>
+                            La primera expresión para la que la prueba resulte ser cierto (cualquier cosa salvo #f cuenta como cierto) será evaluada. Si todas las pruebas resultan ser #f, se evalúa la cláusula else. <br><br>
+                            Una variante de la cláusula cond es: <br><br>
+                            <div>
+                            <code>
+                            (cond...<br>
+                            ......(test => expr)<br>
+                            ....)<br>
+                            </code>
+                            </div><br><br>
+                            En este caso, expr debe resultar en una función que toma un solo argumento. Si test resulta ser cierto, se llama a la función anterior con el valor devuelto por test. <br><br>
+                            Scheme también tiene: <br><br>
+                            <div>
+                            <code>
+                            (if test then-expr else-expr)<br>
+                            </code>
+                            </div><br><br>
+                            pero se usa mucho menos porque cond es más general y normalmente resulta más legible.
+                        </li>
+                        <li><b>Bucles</b><br>
+                        	Los bucles en Scheme suelen tomar la forma de una recursión final o tail recursion en inglés. Este tipo de recursión es preferido porque dispensa la acumulación de tramas en la pila de llamadas y su subsecuente desbordamiento. El estándar exige a las implementaciones optimizar llamadas en posición de recursión final para generar código equivalente a un ciclo en lenguajes imperativos. Un ejemplo clásico es la función factorial, que puede definirse sin recursión final como: <br><br>
+                        	<div>
+                            <code>
+                            (define (factorial n)<br>
+                            ..(cond ((= n 0) 1)<br>
+                            ......(else (* n (factorial (- n 1))))))<br><br>
+                            ..(factorial 5)<br>
+                            ;; => 120
+                            </code>
+                            </div><br><br>
+                            O con recursión final usando un procedimiento extra: <br><br>
+                            <div>
+                            <code>
+                            (define (factorial n)<br>
+                            ..(fact-iter 1 n))<br><br>
+                            (define (fact-iter product n)<br><br>
+                            ..(if (< n 2)<br>
+                            .....product <br>
+                            .....(fact-iter (* product n) <br>
+                            ................(- n 1)))) <br><br>
+                            (factorial 5) <br>
+                            ;; => 120
+                            </code>
+                            </div><br><br>
+                        </li>
+                        <li><b>Entrada/salida</b><br><br>
+                        	Scheme tiene el concepto de puertos de donde leer o a los que escribir. Scheme define tres puertos por defecto, accesibles con las funciones current-input-port, current-output-port y current-error-port.
+                        </li>
+                    </ul>
+                </li>
+            </ul><br>
+        </article>
+        <hr>
+        <article id="esqueleto3" class="esqueleto1">
+        <br><br>
+        <h3>Esqueleto de los programas:</h3><br>
+            <div>
+            <code>
+            (define(NOMBRE DE LA FUNCION) <p style="color: lightblue">;; Se define el nombre de la función o proyecto.</p><br>
+            ....(INSTRUCCIONES O PASOS A REALIZAR))<br>
+            ....(NOMBRE DE LA FUNCION)<br>
+            .........EJECUCION DEL PROGRAMA. <p style="color: lightblue">;; Se especifican los pasos o procedimientos a realizar.</p>
+            </code>
+            </div><br>
+        </article>
+        <hr>
+        <article id="aplicacion3" class="aplicacion1">
+            <br><br>
+            <h3>Aplicación a descargar para editar y ejecutar </h3><br>            
+            <p>Existen diversos programas que pueden ayudar a compilar dicho lenguaje</p><br>
+                <ul class="ul">
+                	<li><p>Bigloo es un sistema cuyo objetivo es permitir programar en Scheme aplicaciones que generalmente requieren C. Produce ejecutables pequeños y rápidos y se puede comunicar con C y Java. Principalmente para Unix, hay también versiones Win32 (con Cygwin) y MacOS X (con xnu-201.5). Licencia GPL.</p>              		
+                	</li> 
+                	<li><p>CHICKEN es un traductor de Scheme a C que se ejecuta en MacOS X, Windows y muchas versiones de Unix.</p></li> 
+                	<li><p>Stalin es un traductor de Scheme a C muy optimizado.</p></li> 
+                	<li><p>PLT-Scheme es un nombre que agrupa varias implementaciones de Scheme, siendo la principal DrScheme. DrScheme es un entorno gráfico interactivo de programación para Windows, MacOS X y Unix/X.</p></li> 
+                	<li><p>SISC es un intérprete de Scheme en Java que implementa por completo el estándar R5RS.</p></li> 
+                </ul>
+        </article>
+        <hr>
+        <article id="paradigma3" class="paradigma1">
+            <br><br>
+            <h3>A que tipo de paradigma pertenece</h3><br>
+            <p>Al ser de carácter multiparadigmatico, podemos decir que pertenece al <b>paradigma Funcional y el Imperativo.</b></p><br>
+            <p>Los programas escritos en un lenguaje funcional están constituidos únicamente por definiciones de funciones, entendiendo estas no como subprogramas clásicos de un lenguaje imperativo, sino como funciones puramente matemáticas, en las que se verifican ciertas propiedades como la transparencia referencial (el significado de una expresión depende únicamente del significado de sus sobrexpresiones), y por tanto, la carencia total de efectos colaterales.</p><br>
+            <p>Otras características propias de estos lenguajes son la no existencia de asignaciones de variables y la falta de construcciones estructuradas como la secuencia o la iteración (lo que obliga en la práctica a que todas las repeticiones de instrucciones se lleven a cabo por medio de funciones recursivas).</p><br>
+            <p>La programación imperativa se rige por dos conceptos básicos para la construcción de programas: la estructura y el modulo. De ahí que se hable de programación estructurada y de programación modular. </p><br>
+            <p>La programación en el paradigma imperativo consiste en determinar qué datos son requeridos para el cálculo, asociar a estas direcciones de memoria y efectuar, paso a paso, una secuencia de transformaciones en los datos almacenados de forma tal que el estado final represente el resultado correcto.</p>
+        </article>
+        <hr>
+        <article id="ejemplo3" class="ejemplo1">
+            <br><br>
+            <h3>Un ejemplo de un programa escrito en ese lenguaje</h3><br>
+            <h4>25 primeros numeros naturales</h4><br>
+            <div>
+            <code>; función que suma dos números agregados como argumento<br><br>
+            (define (suma num1 num2) <br><br>
+            ; implementación del let anterior, aunque no es estrictamente necesario <br>
+            (let <br><br>
+            ;variables de la operación <br>
+            ...((numero1 num1) <br>
+            ...(numero2 num2)) <br><br>
+            ; instrucción que suma los números, es decir, la función <br>
+            (+ numero1 numero2))
+            </code>
+            </div>
+        </article>
+        <hr>
+        </div>
+        </div>    
+    </main>
+
+    <div class="botones">
+            <ul >
+                <li class="atras"><a href="Tarea 4.html"><img src="imagenes/atras.png" alt=""></a></li>
+                <li class="adelante"><a href="Tarea 6.html"><img src="imagenes/adelante.png" alt=""></a></li>
+            </ul>
+        </div>
+
+        <div class="to-top"><a href="#Seccion1"><img src="imagenes/arriba.png" alt=""></a></div>
+
+    <footer>
+        <div class="container-footer-all">
+        <div class="container-body">
+            <div class="colum2">
+                <img src="imagenes/fabajo.png" alt="terry">
+            </div>
+        </div>
+        </div>
+        <div class="container-footer">
+            <div class="copyrght">
+                © 2020 Todos los Derechos Reservados | Axel Ortiz
+            </div>
+
+            <div class="informacion">1819000 | Lenguajes de Programacion | L-M-V: V6</div>
+        </div>
+    </footer>
+</body>
+</html>
